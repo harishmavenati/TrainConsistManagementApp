@@ -7,19 +7,19 @@ public class Main {
 
         System.out.println("=== Train Consist Management App ===");
 
-        // Create LinkedHashSet to store bogies
+        // Create LinkedHashSet to maintain insertion order with uniqueness
         Set<String> trainFormation = new LinkedHashSet<>();
 
-        // Add bogies
+        // Attach bogies
         trainFormation.add("Engine");
         trainFormation.add("Sleeper");
         trainFormation.add("Cargo");
         trainFormation.add("Guard");
 
-        // Attempt to add a duplicate
+        // Attempt to add a duplicate bogie
         trainFormation.add("Sleeper");
 
-        // Display final formation (preserves insertion order, no duplicates)
+        // Display final formation (insertion order preserved, duplicates ignored)
         System.out.println("Final train formation:");
         System.out.println(trainFormation);
     }
